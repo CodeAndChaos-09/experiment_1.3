@@ -1,14 +1,18 @@
-function ProductCard({ name, price, inStock, emoji, category }) {
+function ProductCard({ product, toggleStock }) {
   return (
-    <div className={`card ${category}`}>
-      <div className="emoji">{emoji}</div>
+    <div
+      className={`card ${product.category}`}
+      onClick={() => toggleStock(product.id)}
+      title="Click to toggle stock"
+    >
+      <div className="emoji">{product.emoji}</div>
 
-      <h3>{name}</h3>
-      <p className="price">₹{price}</p>
+      <h3>{product.name}</h3>
+      <p className="price">₹{product.price}</p>
 
-      <p className={inStock ? "stock in" : "stock out"}>
-        {inStock ? "In Stock" : "Out of Stock"}
-      </p>
+      <span className={`badge ${product.inStock ? "in" : "out"}`}>
+        {product.inStock ? "In Stock" : "Out of Stock"}
+      </span>
     </div>
   );
 }
