@@ -1,8 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #eef2f3;
   margin: 0;
-  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f6f8fc;
 }
 
 .container {
@@ -13,49 +12,95 @@ body {
 
 .library {
   background: white;
-  width: 400px;
+  width: 90%;
+  max-width: 800px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-.library input {
+h2 {
+  text-align: center;
+}
+
+.count {
+  text-align: center;
+  color: #555;
+}
+
+.search {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .form input {
-  width: 48%;
-  margin-right: 4%;
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.form input:last-child {
-  margin-right: 0;
-}
-
-button {
-  padding: 8px 12px;
-  background-color: #007bff;
+.form button {
+  padding: 8px 14px;
+  background: #4f46e5;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
 }
 
-li {
-  background: #f7f7f7;
-  margin: 8px 0;
-  padding: 8px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
+.book-card {
+  background: #eef2ff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.25s;
 }
 
-li button {
-  background-color: red;
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.emoji {
+  font-size: 30px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 4px 8px;
+  background: #c7d2fe;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.book-card button {
+  margin-top: 8px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.empty {
+  text-align: center;
+  grid-column: 1 / -1;
+  color: #777;
 }
