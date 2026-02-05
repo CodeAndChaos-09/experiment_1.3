@@ -1,38 +1,80 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
   margin: 0;
-  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #fdf6f9; /* light pastel */
 }
 
 .container {
-  text-align: center;
   padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.category-title {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.food-title {
+  color: #ff7a00;
+}
+
+.clothes-title {
+  color: #6a5acd;
+}
+
+.electronics-title {
+  color: #008080;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
 .card {
-  background: #ffffff;
-  width: 250px;
-  margin: 15px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 200px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.08);
+  background: white;
+}
+
+.emoji {
+  font-size: 40px;
 }
 
 .price {
-  font-size: 18px;
-  color: #333;
+  font-weight: bold;
 }
 
 .stock {
+  margin-top: 8px;
   font-weight: bold;
-  margin-top: 10px;
 }
 
-.in-stock {
+.in {
   color: green;
 }
 
-.out-of-stock {
+.out {
   color: red;
+}
+
+/* Category colors */
+.food {
+  background: #fff2e0;
+}
+
+.clothes {
+  background: #f0ecff;
+}
+
+.electronics {
+  background: #e6f7f7;
 }
