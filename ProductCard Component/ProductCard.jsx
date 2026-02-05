@@ -1,15 +1,13 @@
-function ProductCard(props) {
+function ProductCard({ name, price, inStock, emoji, category }) {
   return (
-    <div className="card">
-      <h2>{props.name}</h2>
-      <p className="price">₹{props.price}</p>
+    <div className={`card ${category}`}>
+      <div className="emoji">{emoji}</div>
 
-      <p
-        className={
-          props.inStock ? "stock in-stock" : "stock out-of-stock"
-        }
-      >
-        {props.inStock ? "In Stock" : "Out of Stock"}
+      <h3>{name}</h3>
+      <p className="price">₹{price}</p>
+
+      <p className={inStock ? "stock in" : "stock out"}>
+        {inStock ? "In Stock" : "Out of Stock"}
       </p>
     </div>
   );
