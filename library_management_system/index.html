@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Experiment 3.2 - Library Management UI</title>
+  <title>Experiment 3.2 - Library Management System</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- React CDN -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- React -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-  <!-- Babel for JSX -->
+  <!-- Babel -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+
   <div id="root"></div>
 
+  <!-- LOAD COMPONENT FIRST -->
   <script type="text/babel" src="Library.jsx"></script>
+
+  <!-- LOAD APP LAST -->
   <script type="text/babel" src="App.jsx"></script>
+
 </body>
 </html>
